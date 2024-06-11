@@ -1,0 +1,173 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url('map.png') no-repeat center center fixed; /* Ganti dengan path gambar latar belakang Anda */
+    background-size: cover;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Warna putih sedikit transparan */
+    z-index: -1; /* Agar berada di belakang konten */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Kotak di dalam overlay */
+.box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+header {
+    background: linear-gradient(90deg, rgb(131, 150, 167) 0%, rgb(50, 67, 141) 100%); /* Warna gradien biru dan hijau */
+    color: white;
+    text-align: center;
+    padding: 20px 0; /* Perbesar padding untuk header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+footer {
+    background-color: #2b3a64; /* Warna footer */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+main {
+    flex: 1;
+    padding: 20px;
+}
+#map {
+    height: 80vh;
+    width: 100%;
+}
+nav {
+    background-color: #405a74; /* Warna abu-abu gelap */
+    text-align: center;
+    padding: 10px 0;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s ease; /* Efek transisi */
+}
+nav a:hover {
+    text-decoration: underline;
+    opacity: 0.8; /* Kurangi kecerahan saat hover */
+}
+.creator-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    visibility: hidden;
+}
+.creator-section img {
+    border-radius: 50%;
+    margin-right: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+.creator-section div {
+    flex: 1;
+}
+
+.creator-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.creator-section p {
+    line-height: 1.6;
+    color: #666;
+}
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    margin: 20px;
+    background-color: rgba(136, 170, 201, 0.8);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    color: #333;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.container h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container p {
+    line-height: 1.6;
+    color: #666;
+}
+
+.map-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: white;
+    background-color: #324f68;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.map-button:hover {
+    background-color: #2275d4;
+    transform: translateY(-2px);
+}
+/* Tambahkan gaya untuk bagian welcome-section */
+.welcome-section {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.welcome-section img {
+    width: 50%; /* Sesuaikan ukuran gambar dengan kebutuhan */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan */
+}
+
+.welcome-section h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333; /* Warna teks heading */
+}
+
+.welcome-section p {
+    font-size: 18px;
+    color: #555; /* Warna teks paragraf */
+    margin-top: 10px;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Sistem Informasi Geografis</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Sistem Informasi Geografis Sebaran Kawasan Transmigrasi di Indonesia</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a onclick="showCreatorSection()">Kontak</a>
+    </nav>
+    <main>
+        <div class="container" id="welcome-section">
+            <h1>Selamat Datang di Web GIS Kawasan Transmigrasi</h1>
+            <p>Aplikasi Web GIS ini menyediakan informasi detail mengenai distribusi dan status kawasan transmigrasi. Pengguna dapat menjelajahi berbagai wilayah, mempelajari sejarah dan keadaan terkini proyek transmigrasi, serta melihat peta interaktif.</p>
+            <a href="peta.html" class="map-button">Lihat Peta</a>
+            <p>Temukan lebih lanjut tentang kawasan transmigrasi dengan menjelajahi peta interaktif kami.</p>
+        </div>
+    </main>
+    <div id="creator-section" class="creator-section">
+        <img src="foto.JPG" alt="Foto Pembuat">
+        <div>
+            <h2>Tentang Pembuat</h2>
+            <p>Nama: Reihan Deirengga</p>
+            <p>Email: reihandeirengga842@gmail.com</p>
+            <p>Telepon: 085760049745</p>
+            <p>Alamat: Kubang Putiah, Bukttinggi, Sumatera Barat, Indonesia</p>
+            <p>Github: <a href="https://github.com/reyhan84" target="_blank">github.com</a></p>
+        </div>
+    </div>
+    <footer>
+        <p>GIS REIHAN DEIRENGGA (2521121) PTIK 6D</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var welcomeSection = document.getElementById('welcome-section');
+            welcomeSection.style.opacity = 1;
+            welcomeSection.style.transform = 'translateY(0)';
+        });
+    
+        function showCreatorSection() {
+            var section = document.getElementById('creator-section');
+            section.style.visibility = 'visible';
+            section.style.opacity = 1;
+            section.style.transform = 'translateY(0)';
+            window.location.hash = '#creator-section';
+        }
+    </script>
+    
+</body>
+</html>
